@@ -10,7 +10,8 @@ const UpdatePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       const result = await RestaurantFinder.get(`/${id}`);
-      setUpdateData(result.data.data);
+      console.log(result.data);
+      setUpdateData(result.data.restaurant);
     };
     fetchData();
   }, []);

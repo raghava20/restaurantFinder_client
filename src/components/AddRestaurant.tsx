@@ -15,13 +15,11 @@ const AddRestaurant: React.FC = () => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      console.log(formData);
       const result = await RestaurantFinder.post("/", {
         name: formData.name,
         location: formData.location,
         price_range: formData.price_range,
       });
-      console.log(result);
       addRestaurants(result.data.data);
       setFormData(initialState);
     } catch (err) {
@@ -34,7 +32,6 @@ const AddRestaurant: React.FC = () => {
   ) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    console.log(formData);
   };
 
   return (

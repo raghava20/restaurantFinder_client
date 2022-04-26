@@ -12,7 +12,6 @@ const RestaurantList: React.FC = (): JSX.Element => {
     try {
       const fetchData = async () => {
         const response = await RestaurantFinder.get("/");
-        console.log(response.data.data);
         setRestaurants(response.data.data);
       };
       fetchData();

@@ -11,7 +11,6 @@ export const RestaurantsContextProvider = ({ children }: ChildrenProps) => {
   const [selectedRestaurants, setSelectedRestaurants] = useState("");
 
   const addRestaurants = (restaurant: any) => {
-    console.log(restaurant, "last");
     setRestaurants([...restaurants, restaurant]);
   };
   return (

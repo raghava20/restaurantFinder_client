@@ -19,7 +19,6 @@ const AddReview = () => {
         rating: formData.rating,
         review: formData.review,
       });
-      console.log(response);
       if (response.data) {
         window.location.reload();
       }

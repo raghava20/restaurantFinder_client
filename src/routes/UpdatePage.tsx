@@ -22,7 +22,6 @@ const UpdatePage = () => {
       location: updateData.location,
       price_range: updateData.price_range,
     });
-    console.log(result);
     navigate("/");
   };
 
